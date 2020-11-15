@@ -1,5 +1,7 @@
 package dev.qinx.unionfind;
 
+import java.util.Arrays;
+
 public abstract class UnionFind {
 
     protected int[] id;
@@ -14,10 +16,14 @@ public abstract class UnionFind {
 
     abstract public void union(int p, int q);
 
+    /**
+     * Test if the two given values are in the same group
+     */
     abstract public boolean connected(int p, int q);
 
     /**
      * Find the group index of the value p
+     *
      * @param p value
      * @return group index of p
      */
@@ -25,7 +31,16 @@ public abstract class UnionFind {
 
     /**
      * Return the number of groups
+     *
      * @return total number of groups
      */
     abstract public int count();
+
+    public int length() {
+        return id.length;
+    }
+
+    public String debug() {
+        return Arrays.toString(id);
+    }
 }

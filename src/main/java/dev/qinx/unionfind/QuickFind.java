@@ -1,9 +1,11 @@
 package dev.qinx.unionfind;
 
-
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Initialize O(N), Union O(N), find O(1)
+ */
 public class QuickFind extends UnionFind {
     public QuickFind(int len) {
         super(len);

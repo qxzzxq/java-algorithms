@@ -13,11 +13,11 @@ public class QuickUnion extends UnionFind {
 
     @Override
     public void union(int p, int q) {
-        int pParent = find(p);
-        int qParent = find(q);
+        int i = find(p);
+        int j = find(q);
 
-        if (pParent != qParent) {
-            id[pParent] = qParent;
+        if (i != j) {
+            id[i] = j;
         }
     }
 

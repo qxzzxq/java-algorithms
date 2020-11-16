@@ -40,7 +40,12 @@ public abstract class UnionFind {
         return id.length;
     }
 
-    public String debug() {
+    @Override
+    public String toString() {
         return Arrays.toString(id);
+    }
+
+    public void log() {
+        System.out.println(toString());
     }
 }
